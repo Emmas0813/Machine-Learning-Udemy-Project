@@ -59,3 +59,7 @@ print(y_test)
 # -------------------
 
 # feature scaling (should come after splitting data)
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler() # performs standarization
+x_train[:, 3:] = sc.fit_transform(x_train[:, 3:]) # takes info from column 3 through rest of range
+x_test[:, 3:] = sc.transform(x_test[:, 3:])
