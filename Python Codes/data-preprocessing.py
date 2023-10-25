@@ -43,4 +43,19 @@ y = le.fit_transform(y) # replace y column with encoded data
 # ---------------------
 
 print(y)
- 
+
+# ---------------------
+
+# splitting the data set into the training set and test set
+
+from sklearn.model_selection import train_test_split
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size = 0.2, random_state=1) #20% in test set and 80% in training set
+
+# --------------------
+print(x_train)
+print(x_test)
+print(y_train)
+print(y_test)
+# -------------------
+
+# feature scaling (should come after splitting data)
